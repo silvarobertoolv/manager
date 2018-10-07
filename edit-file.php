@@ -378,8 +378,8 @@ $current_level = get_current_user_level();
 															</div>
 
 															<div class="form-group">
-																<label><?php _e('Description', 'cftp_admin');?></label>
-																<textarea name="file[<?php echo $i; ?>][description]" class="<?php if ( DESCRIPTIONS_USE_CKEDITOR == 1 ) { echo 'ckeditor'; } ?> form-control" placeholder="<?php _e('Optionally, enter here a description for the file.', 'cftp_admin');?>"><?php echo (!empty($row['description'])) ? html_output($row['description']) : ''; ?></textarea>
+																<label>Chave Verificadora:</label>
+																<textarea name="file[<?php echo $i; ?>][description]" class="<?php if ( DESCRIPTIONS_USE_CKEDITOR == 1 ) { echo 'ckeditor'; } ?> form-control" placeholder="digite obrigatoriamente a chave verificadora do certificado"><?php echo (!empty($row['description'])) ? html_output($row['description']) : ''; ?></textarea>
 															</div>
 														</div>
 													</div>
@@ -391,59 +391,7 @@ $current_level = get_current_user_level();
 												if ($global_level != 0 || CLIENTS_CAN_SET_EXPIRATION_DATE == '1' ) {
 											?>
 													<div class="col-sm-6 col-md-3 column_even column">
-														<div class="file_data">
-															<?php
-																/**
-																* Only show the EXPIRY options if the current
-																* uploader is a system user or client if clients_can_set_expiration_date is set.
-																*/
-																if (!empty($row['expiry_date'])) {
-																	$expiry_date = date('d-m-Y', strtotime($row['expiry_date']));
-																}
-															?>
-															<h3><?php _e('Expiration date', 'cftp_admin');?></h3>
-
-															<div class="form-group">
-																<label for="file[<?php echo $i; ?>][expires_date]"><?php _e('Select a date', 'cftp_admin');?></label>
-																<div class="input-group date-container">
-																	<input type="text" class="date-field form-control datapick-field" readonly id="file[<?php echo $i; ?>][expiry_date]" name="file[<?php echo $i; ?>][expiry_date]" value="<?php echo (!empty($expiry_date)) ? $expiry_date : date('d-m-Y'); ?>" />
-																	<div class="input-group-addon">
-																		<i class="glyphicon glyphicon-time"></i>
-																	</div>
-																</div>
-															</div>
-
-															<div class="checkbox">
-																<label for="exp_checkbox">
-																	<input type="checkbox" id="exp_checkbox" name="file[<?php echo $i; ?>][expires]" value="1" <?php if ($row['expires']) { ?>checked="checked"<?php } ?> /> <?php _e('File expires', 'cftp_admin');?>
-																</label>
-															</div>
-
-															<?php
-																/** The following options are available to users only */
-																if ($global_level != 0) {
-															?>
-															<div class="divider"></div>
-
-															<h3><?php _e('Public downloading', 'cftp_admin');?></h3>
-															<div class="checkbox">
-																<label for="pub_checkbox">
-																	<input type="checkbox" id="pub_checkbox" name="file[<?php echo $i; ?>][public]" value="1" <?php if ($row['public_allow']) { ?>checked="checked"<?php } ?> /> <?php _e('Allow public downloading of this file.', 'cftp_admin');?>
-																</label>
-															</div>
-
-															<div class="divider"></div>
-															<h3><?php _e('Public URL', 'cftp_admin');?></h3>
-															<div class="public_url">
-																<div class="form-group">
-																	<textarea class="form-control" readonly><?php echo BASE_URI; ?>download.php?id=<?php echo $row['id']; ?>&token=<?php echo html_output($row['public_token']); ?></textarea>
-																</div>
-															</div>
-														<?php
-															} /** Close $current_level check */
-														?>
-														</div>
-													</div>
+																						</div>
 											<?php
 												} /** Close $current_level check */
 											?>
@@ -501,16 +449,7 @@ $current_level = get_current_user_level();
 
 															<div class="divider"></div>
 
-															<div class="checkbox">
-																<label for="hid_checkbox">
-																	<input type="checkbox" id="hid_checkbox" name="file[<?php echo $i; ?>][hidden]" value="1" /> <?php _e('Mark as hidden (will not send notifications) for new assigned clients and groups.', 'cftp_admin');?>
-																</label>
-															</div>
-															<div class="checkbox">
-																<label for="hid_existing_checkbox">
-																	<input type="checkbox" id="hid_existing_checkbox" name="file[<?php echo $i; ?>][hideall]" value="1" /> <?php _e('Hide from every already assigned clients and groups.', 'cftp_admin');?>
-																</label>
-															</div>
+														
 														</div>
 													</div>
 

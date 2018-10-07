@@ -125,27 +125,7 @@ $login_button_text = __('Log in','cftp_admin');
 						<input type="password" name="password" id="password" class="form-control" />
 					</div>
 
-					<div class="form-group">
-						<label for="language"><?php _e('Language','cftp_admin'); ?></label>
-						<select name="language" id="language" class="form-control">
-							<?php
-								// scan for language files
-								$available_langs = get_available_languages();
-								foreach ($available_langs as $filename => $lang_name) {
-							?>
-									<option value="<?php echo $filename;?>" <?php echo ( LOADED_LANG == $filename ) ? 'selected' : ''; ?>>
-										<?php
-											echo $lang_name;
-											if ( $filename == SITE_LANG ) {
-												echo ' [' . __('default','cftp_admin') . ']';
-											}
-										?>
-									</option>
-							<?php
-								}
-							?>
-						</select>
-					</div>
+				
 <?php
 /*
 					<label for="login_form_remember">
@@ -166,7 +146,7 @@ $login_button_text = __('Log in','cftp_admin');
 			</form>
 
 			<div class="login_form_links">
-				<p id="reset_pass_link"><?php _e("Forgot your password?",'cftp_admin'); ?> <a href="<?php echo BASE_URI; ?>reset-password.php"><?php _e('Set up a new one.','cftp_admin'); ?></a></p>
+			<!--	<p id="reset_pass_link"><?php /* _e("Forgot your password?",'cftp_admin'); ?> <a href="<?php echo BASE_URI; ?>reset-password.php"><?php _e('Set up a new one.','cftp_admin'); */?></a></p> -->
 				<?php
 					if (CLIENTS_CAN_REGISTER == '1') {
 				?>

@@ -50,7 +50,7 @@ if ( in_session_or_cookies( array( 9,8,7 ) ) )
 	define('COUNT_USERS_INACTIVE', $sql_inactive->rowCount());
 	*/
 
-	$items['dashboard'] = array(
+	/*$items['dashboard'] = array(
 								'nav'	=> 'dashboard',
 								'level'	=> array( 9,8,7 ),
 								'main'	=> array(
@@ -58,7 +58,7 @@ if ( in_session_or_cookies( array( 9,8,7 ) ) )
 												'icon'	=> 'tachometer',
 												'link'	=> 'home.php',
 											),
-							);
+							); */
 
 	$items[]			= 'separator';
 
@@ -116,11 +116,11 @@ if ( in_session_or_cookies( array( 9,8,7 ) ) )
 												array(
 													'divider'	=> true,
 												),
-												array(
+												/*array(
 													'label'	=> __('Account requests', 'cftp_admin'),
 													'link'	=> 'clients-requests.php',
 													'badge'	=> COUNT_CLIENTS_REQUESTS,
-												),
+												), */
 											),
 							);
 
@@ -144,11 +144,11 @@ if ( in_session_or_cookies( array( 9,8,7 ) ) )
 												array(
 													'divider'	=> true,
 												),
-												array(
+												/*array(
 													'label'	=> __('Membership requests', 'cftp_admin'),
 													'link'	=> 'clients-membership-requests.php',
 													'badge'	=> COUNT_MEMBERSHIP_REQUESTS,
-												),
+												),*/
 											),
 							);
 
@@ -174,7 +174,7 @@ if ( in_session_or_cookies( array( 9,8,7 ) ) )
 
 	$items[]			= 'separator';
 
-	$items['templates']	= array(
+/*	$items['templates']	= array(
 								'nav'	=> 'templates',
 								'level'	=> array( 9 ),
 								'main'	=> array(
@@ -187,9 +187,9 @@ if ( in_session_or_cookies( array( 9,8,7 ) ) )
 													'link'	=> 'templates.php',
 												),
 											),
-							);
+							);  */
 
-	$items['options']	= array(
+/*	$items['options']	= array(
 								'nav'	=> 'options',
 								'level'	=> array( 9 ),
 								'main'	=> array(
@@ -232,7 +232,7 @@ if ( in_session_or_cookies( array( 9,8,7 ) ) )
 											),
 							);
 
-	$items['emails']	= array(
+/*	$items['emails']	= array(
 								'nav'	=> 'emails',
 								'level'	=> array( 9 ),
 								'main'	=> array(
@@ -281,7 +281,7 @@ if ( in_session_or_cookies( array( 9,8,7 ) ) )
 													'link'	=> 'email-templates.php?section=password_reset',
 												),
 											),
-							);
+							); 
 
 	$items[]			= 'separator';
 
@@ -298,7 +298,7 @@ if ( in_session_or_cookies( array( 9,8,7 ) ) )
 													'link'	=> 'actions-log.php',
 												),
 											),
-							);
+							); */
 
 }
 /**
@@ -306,7 +306,7 @@ if ( in_session_or_cookies( array( 9,8,7 ) ) )
  */
 else
 {
-	if (CLIENTS_CAN_UPLOAD == 1)
+	/*if (CLIENTS_CAN_UPLOAD == 1)
 	{
 		$items['upload'] = array(
 									'nav'	=> 'upload',
@@ -317,7 +317,7 @@ else
 													'icon'	=> 'cloud-upload',
 												),
 								);
-	}
+	} 
 
 	$items['manage_files'] = array(
 								'nav'	=> 'manage',
@@ -327,7 +327,7 @@ else
 												'link'	=> 'manage-files.php',
 												'icon'	=> 'file',
 											),
-							);
+							); */
 
 	$items['view_files'] = array(
 								'nav'	=> 'template',
