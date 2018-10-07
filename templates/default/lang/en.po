@@ -1,16 +1,15 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: ProjectSend theme: Default\n"
 "POT-Creation-Date: 2018-02-26 02:23-0300\n"
-"PO-Revision-Date: 2016-09-14 15:42-0300\n"
+"PO-Revision-Date: 2018-10-07 18:09-0400\n"
 "Last-Translator: \n"
 "Language-Team: ProjectSend <contact@projectsend.org>\n"
-"Language: en\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.1.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: _e;__\n"
@@ -18,84 +17,84 @@ msgstr ""
 
 #: template.php:21
 msgid "File downloads"
-msgstr ""
+msgstr "Downloads de arquivo"
 
 #: template.php:57
 msgid "All categories"
-msgstr ""
+msgstr "Todas categorias"
 
 #: template.php:64
 msgid "Filter"
-msgstr ""
+msgstr "Filtro"
 
 #: template.php:78
 msgid "Selected files actions"
-msgstr ""
+msgstr "Ações de arquivos selecionados"
 
 #: template.php:82
 msgid "Select action"
-msgstr ""
+msgstr "Selecionar ação"
 
 #: template.php:83
 msgid "Download zipped"
-msgstr ""
+msgstr "Download compactado"
 
 #: template.php:93
 msgid "Proceed"
-msgstr ""
+msgstr "Prosseguir"
 
 #: template.php:101
 msgid "Found"
-msgstr ""
+msgstr "Encontrado"
 
 #: template.php:101
 msgid "files"
-msgstr ""
+msgstr "arquivos"
 
 #: template.php:111
 msgid "Your search keywords returned no results."
-msgstr ""
+msgstr "Suas palavras-chave de pesquisa não retornaram resultados."
 
 #: template.php:116
 msgid "There are no files available."
-msgstr ""
+msgstr "Não há arquivos disponíveis."
 
 #: template.php:142
 msgid "Title"
-msgstr ""
+msgstr "Título"
 
 #: template.php:145
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 #: template.php:151
 msgid "Description"
-msgstr ""
+msgstr "Descrição"
 
 #: template.php:158
 msgid "Size"
-msgstr ""
+msgstr "Tamanho"
 
 #: template.php:165
 msgid "Date"
-msgstr ""
+msgstr "Data"
 
 #: template.php:168
 msgid "Expiration date"
-msgstr ""
+msgstr "Data de validade"
 
 #: template.php:172
 msgid "Image preview"
-msgstr ""
+msgstr "Pré-visualizar Imagem"
 
 #: template.php:176 template.php:262
 msgid "Download"
-msgstr ""
+msgstr "Baixar"
 
 #: template.php:234
 msgid "Never"
-msgstr ""
+msgstr "Nunca"
 
 #: template.php:258
 msgid "File expired"
-msgstr ""
+msgstr "Arquivo expirado"

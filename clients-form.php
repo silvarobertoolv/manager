@@ -173,23 +173,9 @@ switch ($clients_form_type) {
 	<?php
 		if ($extra_fields == true) {
 	?>
-			<div class="form-group">
-				<label for="add_client_form_intcont" class="col-sm-4 control-label"><?php _e('Internal contact name','cftp_admin'); ?></label>
-				<div class="col-sm-8">
-					<input type="text" name="add_client_form_intcont" id="add_client_form_intcont" class="form-control" value="<?php echo (isset($add_client_data_intcont)) ? html_output(stripslashes($add_client_data_intcont)) : ''; ?>" />
-				</div>
-			</div>
+		
 
-			<div class="form-group">
-				<label for="add_client_form_maxfilesize" class="col-sm-4 control-label"><?php _e('Max. upload filesize','cftp_admin'); ?></label>
-				<div class="col-sm-8">
-					<div class="input-group">
-						<input type="text" name="add_client_form_maxfilesize" id="add_client_form_maxfilesize" class="form-control" value="<?php echo (isset($add_client_data_maxfilesize)) ? html_output(stripslashes($add_client_data_maxfilesize)) : ''; ?>" />
-						<span class="input-group-addon">mb</span>
-					</div>
-					<p class="field_note"><?php _e("Set to 0 to use the default system limit",'cftp_admin'); ?> (<?php echo MAX_FILESIZE; ?> mb)</p>
-				</div>
-			</div>
+		
 	<?php
 		}
 	?>
@@ -282,24 +268,12 @@ switch ($clients_form_type) {
 		}
 	?>
 
-	<div class="form-group">
-		<div class="col-sm-8 col-sm-offset-4">
-			<label for="add_client_form_notify_upload">
-				<input type="checkbox" name="add_client_form_notify_upload" id="add_client_form_notify_upload" <?php echo (isset($add_client_data_notify_upload) && $add_client_data_notify_upload == 1) ? 'checked="checked"' : ''; ?>> <?php _e('Notify new uploads by e-mail','cftp_admin'); ?>
-			</label>
-		</div>
-	</div>
+	
 
 	<?php
 		if ( $clients_form_type == 'new_client' ) {
 	?>
-			<div class="form-group">
-				<div class="col-sm-8 col-sm-offset-4">
-					<label for="add_client_form_notify_account">
-						<input type="checkbox" name="add_client_form_notify_account" id="add_client_form_notify_account" <?php echo (isset($add_client_data_notify_account) && $add_client_data_notify_account == 1) ? 'checked="checked"' : ''; ?>> <?php _e('Send welcome email','cftp_admin'); ?>
-					</label>
-				</div>
-			</div>
+	
 	<?php
 		}
 	?>
@@ -326,7 +300,7 @@ switch ($clients_form_type) {
 
 	<?php
 		if ($info_box == true) {
-			$msg = __('This account information will be e-mailed to the address supplied above','cftp_admin');
+			$msg = 'Clique em adicionar cliente para confirmar o cadastro';
 			echo system_message('info',$msg);
 		}
 	?>

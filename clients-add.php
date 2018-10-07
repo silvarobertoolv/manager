@@ -136,7 +136,7 @@ if ($_POST) {
 							echo system_message('ok',$msg);
 						break;
 						case 0:
-							$msg = __("E-mail notification couldn't be sent.",'cftp_admin');
+							$msg =''; //__("E-mail notification couldn't be sent.",'cftp_admin');
 							echo system_message('error',$msg);
 						break;
 					}

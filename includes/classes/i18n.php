@@ -18,8 +18,9 @@
  *
  */
 if( ! defined( 'I18N_DEFAULT_DOMAIN' ) ) {
-  define( 'I18N_DEFAULT_DOMAIN', '' );
+  define( 'I18N_DEFAULT_DOMAIN', 'pt-br' );
 }
+define( 'I18N_DEFAULT_DOMAIN', 'pt' );
 
 /**
  * Get a translated string

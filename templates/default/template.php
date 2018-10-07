@@ -145,7 +145,7 @@ include_once(ROOT_DIR.'/header.php');
 														'content'		=> __('Type','cftp_admin'),
 														'hide'			=> 'phone',
 													),
-													array(
+													/*array(
 														'sortable'		=> true,
 														'sort_url'		=> 'description',
 														'content'		=> __('Description','cftp_admin'),
@@ -153,7 +153,7 @@ include_once(ROOT_DIR.'/header.php');
 														'attributes'	=> array(
 																				'class'		=> array( 'description' ),
 																			),
-													),
+													), */
 													array(
 														'content'		=> __('Size','cftp_admin'),
 														'hide'			=> 'phone',
@@ -164,14 +164,14 @@ include_once(ROOT_DIR.'/header.php');
 														'sort_default'	=> true,
 														'content'		=> __('Date','cftp_admin'),
 													),
-													array(
+												/*	array(
 														'content'		=> __('Expiration date','cftp_admin'),
 														'hide'			=> 'phone',
 													),
 													array(
 														'content'		=> __('Image preview','cftp_admin'),
 														'hide'			=> 'phone,tablet',
-													),
+													), */
 													array(
 														'content'		=> __('Download','cftp_admin'),
 														'hide'			=> 'phone',
@@ -281,19 +281,19 @@ include_once(ROOT_DIR.'/header.php');
 																				'class'		=> array( 'extra' ),
 																			),
 													),
-													array(
+													/*array(
 														'content'		=> $description,
 														'attributes'	=> array(
 																				'class'		=> array( 'description' ),
 																			),
-													),
+													),*/
 													array(
 														'content'		=> $file_size_cell,
 													),
 													array(
 														'content'		=> $date,
 													),
-													array(
+												/*	array(
 														'content'		=> $expiration_cell,
 													),
 													array(
@@ -301,7 +301,7 @@ include_once(ROOT_DIR.'/header.php');
 														'attributes'	=> array(
 																				'class'		=> array( 'extra' ),
 																			),
-													),
+													),*/
 													array(
 														'content'		=> $download_cell,
 														'attributes'	=> array(
