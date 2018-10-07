@@ -600,18 +600,18 @@ include('header.php');
 													'hide'			=> 'phone',
 													'condition'		=> ( $conditions['is_not_client'] && !$conditions['is_search_on'] ),
 												),
-												array(
+												/*array(
 													'sortable'		=> true,
 													'sort_url'		=> 'public_allow',
 													'content'		=> __('Public permissions','cftp_admin'),
 													'hide'			=> 'phone',
 													'condition'		=> $conditions['is_not_client'],
-												),
-												array(
+												), */
+												/* array(
 													'content'		=> __('Expiry','cftp_admin'),
 													'hide'			=> 'phone',
 													'condition'		=> $conditions['is_not_client'],
-												),
+												), */
 												array(
 													'content'		=> __('Status','cftp_admin'),
 													'hide'			=> 'phone',
@@ -698,7 +698,7 @@ include('header.php');
 						/**
 						 * Visibility
 						 */
-						if ($row['public_allow'] == '1') {
+					/*	if ($row['public_allow'] == '1') {
 							$visibility_link	= '<a href="javascript:void(0);" class="btn btn-primary btn-sm public_link" data-type="file" data-id="' . $row['id'] .'" data-token="' . html_output($row['public_token']) .'">';
 							$visibility_label	= __('Download','cftp_admin');
 						}
@@ -716,7 +716,7 @@ include('header.php');
 						/**
 						 * Expiration
 						 */
-						if ($row['expires'] == '0') {
+					/*	if ($row['expires'] == '0') {
 							$expires_button	= 'success';
 							$expires_label	= __('Does not expire','cftp_admin');
 						}
@@ -735,7 +735,7 @@ include('header.php');
 	
 						/**
 						 * Visibility
-						 */
+						 
 						$status_label = '';
 						$status_class = '';
 						if ( isset( $search_on ) ) {
@@ -809,7 +809,7 @@ include('header.php');
 													'content'		=> '<span class="label label-' . $assigned_class .'">' . $assigned_status . '</span>',
 													'condition'		=> ( $conditions['is_not_client'] && !$conditions['is_search_on'] ),
 												),
-												array(
+												/*array(
 													'attributes'	=> array(
 																			'class'		=> array( 'col_visibility' ),
 																		),
@@ -819,7 +819,7 @@ include('header.php');
 												array(
 													'content'		=> '<a href="javascript:void(0);" class="btn btn-' . $expires_button . ' disabled btn-sm" rel="" title="">' . $expires_label . '</a>',
 													'condition'		=> $conditions['is_not_client'],
-												),
+												),*/
 												array(
 													'content'		=> '<span class="label label-' . $status_class .'">' . $status_label . '</span>',
 													'condition'		=> $conditions['is_search_on'],

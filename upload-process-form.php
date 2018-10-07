@@ -293,14 +293,14 @@ while( $row = $statement->fetch() ) {
 			<thead>
 				<tr>
 					<th data-sort-initial="true"><?php _e('Title','cftp_admin'); ?></th>
-					<th data-hide="phone"><?php _e('Description','cftp_admin'); ?></th>
+					<th data-hide="phone">Chave Verificadora:</th>
 					<th data-hide="phone"><?php _e('File Name','cftp_admin'); ?></th>
 					<?php
 						if ($current_level != 0) {
 					?>
-							<th data-hide="phone"><?php _e("Status",'cftp_admin'); ?></th>
+						<!--<th data-hide="phone"><?php //_e("Status",'cftp_admin'); ?></th> -->
 							<th data-hide="phone"><?php _e('Assignations','cftp_admin'); ?></th>
-							<th data-hide="phone"><?php _e('Public','cftp_admin'); ?></th>
+						<!--	<th data-hide="phone"><?php// _e('Public','cftp_admin'); ?></th> -->
 					<?php
 						}
 					?>
@@ -329,30 +329,8 @@ while( $row = $statement->fetch() ) {
 										<?php echo ( !empty( $hidden ) && $hidden == 1) ? $status_hidden : $status_visible; ?>
 									</span>
 								</td>
-								<td>
-									<?php $class = ($uploaded['assignations'] > 0) ? 'success' : 'danger'; ?>
-									<span class="label label-<?php echo $class; ?>">
-										<?php echo $uploaded['assignations']; ?>
-									</span>
-								</td>
-								<td class="col_visibility">
-									<?php
-										if ($uploaded['public'] == '1') {
-									?>
-											<a href="javascript:void(0);" class="btn btn-primary btn-sm public_link" data-type="file" data-id="<?php echo $uploaded['file_id']; ?>" data-token="<?php echo html_output($uploaded['public_token']); ?>">
-									<?php
-										}
-										else {
-									?>
-											<a href="javascript:void(0);" class="btn btn-default btn-sm disabled" rel="" title="">
-									<?php
-										}
-												$status_public	= __('Public','cftp_admin');
-												$status_private	= __('Private','cftp_admin');
-												echo ($uploaded['public'] == 1) ? $status_public : $status_private;
-									?>
-											</a>
-								</td>
+								
+								
 						<?php
 							}
 						?>
@@ -490,8 +468,8 @@ while( $row = $statement->fetch() ) {
 																</div>
 
 																<div class="form-group">
-																	<label><?php _e('Description', 'cftp_admin');?></label>
-																	<textarea name="file[<?php echo $i; ?>][description]" class="<?php if ( DESCRIPTIONS_USE_CKEDITOR == 1 ) { echo 'ckeditor'; } ?> form-control" placeholder="<?php _e('Optionally, enter here a description for the file.', 'cftp_admin');?>"><?php echo (isset($description)) ? html_output($description) : ''; ?></textarea>
+																	<label>Chave Verificadora:</label>
+																	<textarea name="file[<?php echo $i; ?>][description]" class="<?php if ( DESCRIPTIONS_USE_CKEDITOR == 1 ) { echo 'ckeditor'; } ?> form-control" placeholder="digite obrigatoriamente a chave verificadora do certificado"><?php echo (isset($description)) ? html_output($description) : ''; ?></textarea>
 																</div>
 
 															</div>
@@ -503,51 +481,7 @@ while( $row = $statement->fetch() ) {
 													/** The following options are available to users or client if clients_can_set_expiration_date set. */
 													if ($global_level != 0 || CLIENTS_CAN_SET_EXPIRATION_DATE == '1' ) {
 												?>
-													<div class="col-sm-6 col-md-3 column_even column">
-														<div class="file_data">
-															<?php
-																/**
-																* Only show the expiration options if the current
-																* uploader is a system user or client if clients_can_set_expiration_date is set.
-																*/
-															?>
-															<h3><?php _e('Expiration date', 'cftp_admin');?></h3>
-
-															<div class="form-group">
-																<label for="file[<?php echo $i; ?>][expires_date]"><?php _e('Select a date', 'cftp_admin');?></label>
-																	<div class="input-group date-container">
-																		<input type="text" class="date-field form-control datapick-field" readonly id="file[<?php echo $i; ?>][expiry_date]" name="file[<?php echo $i; ?>][expiry_date]" value="<?php echo (!empty($expiry_date)) ? $expiry_date : date('d-m-Y'); ?>" />
-																		<div class="input-group-addon">
-																			<i class="glyphicon glyphicon-time"></i>
-																		</div>
-																	</div>
-															</div>
-
-															<div class="checkbox">
-																<label for="exp_checkbox_<?php echo $i; ?>">
-																	<input type="checkbox" name="file[<?php echo $i; ?>][expires]" id="exp_checkbox_<?php echo $i; ?>" value="1" <?php if ($row['expiry_set']) { ?>checked="checked"<?php } ?> /> <?php _e('File expires', 'cftp_admin');?>
-																</label>
-															</div>
-
-															<?php
-																/** The following options are available to users only */
-																if ($global_level != 0) {
-															?>
-
-																<div class="divider"></div>
-
-																<h3><?php _e('Public downloading', 'cftp_admin');?></h3>
-
-																<div class="checkbox">
-																	<label for="pub_checkbox_<?php echo $i; ?>">
-																		<input type="checkbox" id="pub_checkbox_<?php echo $i; ?>" name="file[<?php echo $i; ?>][public]" value="1" /> <?php _e('Allow public downloading of this file.', 'cftp_admin');?>
-																	</label>
-																</div>
-														<?php
-															} /** Close $current_level check */
-														?>
-														</div>
-													</div>
+													
 												<?php
 													} /** Close $current_level check */
 												?>
@@ -602,11 +536,7 @@ while( $row = $statement->fetch() ) {
 
 																<div class="divider"></div>
 
-																<div class="checkbox">
-																	<label for="hid_checkbox_<?php echo $i; ?>">
-																		<input type="checkbox" id="hid_checkbox_<?php echo $i; ?>" name="file[<?php echo $i; ?>][hidden]" value="1" /> <?php _e('Upload hidden (will not send notifications)', 'cftp_admin');?>
-																	</label>
-																</div>
+																
 															</div>
 														</div>
 
